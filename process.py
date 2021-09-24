@@ -18,7 +18,7 @@ def sales_reports(log_file):
             print(line)
 
 #Invoke the sales_reports function with the log_file
-sales_reports(log_file)
+#sales_reports(log_file)
 
 #CHANGED SCRIPT: Display sales info for Monday
 def sales_reports_monday(log_file):
@@ -29,3 +29,13 @@ def sales_reports_monday(log_file):
             print(line)
 
 sales_reports_monday(log_file)
+
+#EXTRA CREDIT: function that prints out all the melon orders that delivered over 10 melons.
+def over_ten(log_file):
+    for line in log_file:
+        line = line.rstrip()
+        qty = line[16:18]
+        if int(qty) > 10:
+            print(line)
+
+over_ten(log_file)
